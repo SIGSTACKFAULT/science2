@@ -2,11 +2,18 @@
 <html>
 	<head>
 		<title>FOR SCIENCE!</title>
-		<link rel="stylesheet" type="text/css" href="header.css" />
+		
+<?php
+	include($_SERVER["DOCUMENT_ROOT"] . "/common/head.php");
+?>
 		<!-- TODO: OpenGraph -->
 	</head>
 	<body>
-		<?php include "./header.php" ?>
-
+<?php
+	include($_SERVER["DOCUMENT_ROOT"] . "/common/header.php");
+?>
+	
+	
+		
 	</body>
 </html>
