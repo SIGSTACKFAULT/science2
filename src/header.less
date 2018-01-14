@@ -1,0 +1,59 @@
+@bg:  #ffffff;	// Background color
+@hi:  #0000ff;	// Highlight color
+@hi2: #3333ff;
+@hv:  lightgrey; // Hover color
+@tx:  #000000;	// Text color
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	background-color: @bg;
+	color: @tx;
+	border-bottom: 2px solid @hi;
+	text-align: center;
+	font-family: Futura, Arial, sans-serif;
+
+	h1 {
+		margin: 10px;
+	}
+
+	table#navigation {
+		width: 100%;
+		border-bottom: 1px solid grey;
+		table-layout: fixed;
+		padding-bottom: 1px;
+		
+		td {
+			// For some reason this makes
+			//them all be the same width.
+			width: 1%;
+			
+			a {
+				border-radius: 5px 5px 0px 0px;
+				text-decoration: none;
+			}
+			a:hover {
+				background: @hv;
+				padding: 2px 5px;
+				border-bottom: 1px solid @hi2;
+			}
+		}
+	}
+	
+	table#resources {
+		td {
+			border-right: 1px solid grey;
+			padding: 2px 5px;
+			span {
+				color: @hi;
+				margin-left: 2px;
+			}
+		}
+		td:last-child {
+			border-right: none;
+		}
+	}
+}
