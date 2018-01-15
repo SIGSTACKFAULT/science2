@@ -3,7 +3,7 @@
 
 ##### Actual targets for using
 
-build: tabs misc css common build/index.php
+build: misc css common tabs build/index.php
 
 clean:
 	rm -rf build/*
@@ -13,18 +13,12 @@ clean:
 ##### Intermediate targets; all phony
 
 misc:	build/404.html build/.htaccess
-tabs:	build/tab/upgrades/ build/tab/achievements/
-common:	build/common/ build/common/header.css build/common/header.php build/common/head.php build/common/common.js build/common/resources.js
-
+tabs:	hiring.tab
+common: build/common/header.css build/common/header.php build/common/head.php build/common/common.js build/common/resources.js
 
 
 ##### Actual targets that do stuff
-
-
-
-# Pattern rule for making a tab folder.
-build/tab/%/: build/tab/%/ build/tab/%/index.php build/tab/%/style.css
-
+hiring.tab: build/tab/hiring/ build/tab/hiring/index.php build/tab/hiring/style.css
 
 
 # Pattern rule for building .css from .less
