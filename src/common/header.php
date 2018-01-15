@@ -5,13 +5,16 @@
 			<table id="navigation">
 				<tr>
 					<td>
-						<a href="/">Hiring</a>
+						<a href="/">SCIENCE</a>
 					</td>
 					<td>
-						<a href="/tab/upgrades">Upgrades</a>
+						<a href="/tab/hiring/">Hiring</a>
 					</td>
 					<td>
-						<a href="/tab/achivements">Achivements</a>
+						<a href="/tab/upgrades/">Upgrades</a>
+					</td>
+					<td>
+						<a href="/tab/achivements/">Achivements</a>
 					</td>
 				</tr>
 			</table>
