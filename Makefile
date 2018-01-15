@@ -14,7 +14,7 @@ clean:
 
 misc:	build/404.html build/.htaccess
 tabs:	build/tab/upgrades/ build/tab/achievements/
-common:	build/common/ build/common/header.css build/common/header.php build/common/head.php
+common:	build/common/ build/common/header.css build/common/header.php build/common/head.php build/common/common.js build/common/resources.js
 
 
 
