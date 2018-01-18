@@ -20,7 +20,6 @@ function ready_to_rumble(){
 }
 
 function main_loop(){
-	
 	resources.science += resources.science_diff
 	resources.money   += resources.money_diff
 

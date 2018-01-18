@@ -2,6 +2,9 @@ var sellrr = class {
 	
 	constructor(){
 		this.pow = 0;
+		if(localStorage.sellrr_pow != undefined)
+			this.pow = parseInt(localStorage.sellrr_pow);
+		$(document).ready(function(){sellrr.draw()})
 	}
 
 	sell(){
@@ -29,6 +32,8 @@ var sellrr = class {
 	draw(){
 		$("#sell-research-rights .power").text(this.pow)
 		$("#sell-research-rights .amount").text(Math.pow(10,this.pow))
+		localStorage.sellrr_pow = sellrr.pow
+		return $("sell-research-rights")
 	}
 }
 
