@@ -12,8 +12,8 @@
 <?php
 	include($_SERVER["DOCUMENT_ROOT"] . "/common/header.php");
 ?>
-	<div id="content">
 	
-	</div>
+	
+		
 	</body>
 </html>

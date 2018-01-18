@@ -20,7 +20,7 @@
 			</table>
 			<table id="resources">
 				<tr>
-					<td>A<span class="science" />0</td>
+					<td><atom></atom><span class="science" />0</td>
 					<td>$<span class="money" />0</td>
 				</tr>
 			</table>
