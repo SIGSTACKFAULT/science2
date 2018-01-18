@@ -16,7 +16,7 @@ clean:
 
 ##### Intermediate targets; all phony
 
-misc:	build/404.php build/.htaccess
+misc:	build/404.php build/.htaccess build/favicon.ico
 tabs:	build/tab/hiring/ build/tab/upgrades/ build/tab/achievements/
 common: build/common/header.css build/common/common.css build/common/header.php build/common/head.php build/common/common.js build/common/resources.js build/common/cacheCommonDomElements.js
 js: build/sellResearchRights.js
@@ -29,7 +29,6 @@ build/tab/%/:
 
 
 
-# pattern rules for .html and .php
 build/%.html: src/%.html
 	cp		$< $@
 build/%.php: src/%.html
@@ -51,5 +50,15 @@ build/%.css: src/%.less const.less
 # Pattern rule for mkdir-ing folders
 build/%/:
 	mkdir -p	$@
+
+
+
+
+##### MISC RULES
+
+build/favicon.ico: src/favicon.ico
+	cp		$< $@
+
+
 
 # vim: ts=8
