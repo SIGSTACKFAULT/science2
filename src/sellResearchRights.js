@@ -25,6 +25,7 @@ var sellrr = class {
 
 	less(){
 		this.pow--;
+		this.pow = Math.max(this.pow, 0);
 		this.draw()
 		return this.pow
 	}
@@ -32,6 +33,11 @@ var sellrr = class {
 	draw(){
 		$("#sell-research-rights .power").text(this.pow)
 		$("#sell-research-rights .amount").text(Math.pow(10,this.pow))
+		if(this.pow == 0){
+			$("#sell-research-rights .less").prop("disabled", true)
+		} else {
+			$("#sell-research-rights .less").prop("disabled", false)
+		}
 		localStorage.sellrr_pow = sellrr.pow
 		return $("sell-research-rights")
 	}

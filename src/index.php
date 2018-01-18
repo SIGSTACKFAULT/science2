@@ -21,7 +21,7 @@
 				<button class="btn more" onclick="sellrr.more()">
 					+
 				</button>
-				<button class="btn more" onclick="sellrr.less()">
+				<button class="btn less" onclick="sellrr.less()">
 					-
 				</button>
 				&times;10<sup class="power hi">0</sup> = <span class="amount">1</span>
