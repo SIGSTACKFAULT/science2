@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+$U = $_GET["u"]
+?>
 <html>
 	<head>
 		<title>FOR SCIENCE!</title>
@@ -13,7 +16,17 @@
 	include($_SERVER["DOCUMENT_ROOT"] . "/common/header.php");
 ?>
 	
-	Hiring!
-		
+	<div id="hiring">
+		<ul class="pick">
+			<li><a href="/tab/hiring/?u=Intern"		>Intern</a></li>
+			<li><a href="/tab/hiring/?u=Accountant"	>Accountant</a></li>
+			<li><a href="/tab/hiring/?u=SpreadBot"	>SpreadBot</a></li>
+		</ul>
+		<?php echo $u ?>
+	</div>
+	
 	</body>
 </html>
+
+<!-- vim: ts=4 syntax=php
+-->
