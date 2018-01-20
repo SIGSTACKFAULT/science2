@@ -1,64 +1,37 @@
-.PHONY: xyzzy clean  css js misc tabs common %.tab
+hidden = build/.htaccess
+all = $(shell find src/ | sed 's/src/build/; s/less/css/') $(hidden)
 
-##### VARIABLES
+.PHONY: build clean test
 
-MAKE += --no-print-directory
-
-
-##### Actual targets for using
-
-build: js css misc common tabs build/index.php
+build: $(all)
 
 clean:
-	rm -rf build/*
+	rm -r build/
 
-
-
-##### Intermediate targets; all phony
-
-misc:	build/404.php build/.htaccess build/favicon.ico
-tabs:	build/tab/hiring/ build/tab/upgrades/ build/tab/achievements/
-common: build/common/header.css build/common/common.css build/common/header.php build/common/head.php build/common/common.js build/common/resources.js build/common/cacheCommonDomElements.js
-js: build/sellResearchRights.js
-
-
-##### PATTERN RULES
-build/tab/%/:
-	mkdir -p	$@
-	@$(MAKE) $@index.php $@style.css
-
-
-
-build/%.html: src/%.html
-	cp		$< $@
-build/%.php: src/%.html
-	cp		$< $@
-build/%.php: src/%.php
-	cp		$< $@
+test:
+	@echo $(all)
 
 
 build/%.js: src/%.js
-	cp		$< $@
+	cp	$< $@
+build/%.php: src/%.php
+	cp	$< $@
 build/%.css: src/%.css
-	cp		$< $@
+	cp	$< $@
 
 
-# Pattern rule for building .css from .less
-build/%.css: src/%.less const.less
-	lessc		$<	$@
+build/%.css: src/%.less
+	lessc	$< $@
 
-# Pattern rule for mkdir-ing folders
-build/%/:
-	mkdir -p	$@
-
-
-
-
-##### MISC RULES
 
 build/favicon.ico: src/favicon.ico
-	cp		$< $@
+	cp	$< $@
+build/.htaccess: src/.htaccess
+	cp	$< $@
 
 
 
-# vim: ts=8
+build/:
+	mkdir	$@
+build/%:
+	mkdir	$@

@@ -22,7 +22,7 @@ $U = $_GET["u"]
 			<li><a href="/tab/hiring/?u=Accountant"	>Accountant</a></li>
 			<li><a href="/tab/hiring/?u=SpreadBot"	>SpreadBot</a></li>
 		</ul>
-		<?php echo $u ?>
+		<?php echo($u); ?>
 	</div>
 	
 	</body>

@@ -1,6 +1,6 @@
 <!-- from common/header.php -->
 		<div id="header">
-			<h1>SCIENCE!</h1>
+			<button onclick="big_button()"><h1>SCIENCE!</h1></button>
 			
 			<table id="navigation">
 				<tr>

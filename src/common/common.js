@@ -10,6 +10,10 @@ if(localStorage.resources)
 
 $(document).ready(ready_to_rumble);
 
+function big_button(){
+	resources.science += resources.click_diff;
+	draw()
+}
 
 function ready_to_rumble(){
 	console.log("Let's rumble, jQuery.");
@@ -17,6 +21,9 @@ function ready_to_rumble(){
 	
 	main_loop();
 	setInterval(main_loop, 1000)
+	
+	// check if anything is NaN and fix it
+	
 }
 
 function main_loop(){
