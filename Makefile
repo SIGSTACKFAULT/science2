@@ -1,12 +1,12 @@
 hidden = build/.htaccess
-all = $(shell find src/ | sed 's/src/build/; s/less/css/') $(hidden)
+all = $(shell ./getfiles)
 
 .PHONY: build clean test
 
 build: $(all)
 
 clean:
-	rm -r build/
+	rm -r build/*
 
 test:
 	@echo $(all)
@@ -17,6 +17,8 @@ build/%.js: src/%.js
 build/%.php: src/%.php
 	cp	$< $@
 build/%.css: src/%.css
+	cp	$< $@
+build/%.json: src/%.json
 	cp	$< $@
 
 
@@ -33,5 +35,5 @@ build/.htaccess: src/.htaccess
 
 build/:
 	mkdir	$@
-build/%:
+build/%/:
 	mkdir	$@

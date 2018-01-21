@@ -1,0 +1,2 @@
+#!/bin/bash
+(find src -type d | sed 's|$|/|'; find src -type f) | sed 's/^src/build/; s/\.less/.css/'
