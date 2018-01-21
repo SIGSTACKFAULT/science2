@@ -1,7 +1,14 @@
-<!doctype html>
 <?php
-$U = $_GET["u"]
+// get ?u=
+$U = $_GET["u"];
+
+// if there isn't one, redirect to Intern
+if($U == ""){
+	header("Location: http://science.blacksilver.xyz/tab/hiring?u=Intern");
+	die();
+}
 ?>
+<!doctype html>
 <html>
 	<head>
 		<title>FOR SCIENCE!</title>
@@ -9,6 +16,10 @@ $U = $_GET["u"]
 <?php
 	include($_SERVER["DOCUMENT_ROOT"] . "/common/head.php");
 ?>
+		<script>
+			var hiretype = "<?php echo $U ?>"
+		</script>
+		<script src="hiring.js"></script>
 		<!-- TODO: OpenGraph -->
 	</head>
 	<body>
@@ -17,12 +28,20 @@ $U = $_GET["u"]
 ?>
 	
 	<div id="hiring">
-		<ul class="pick">
-			<li><a href="/tab/hiring/?u=Intern"		>Intern</a></li>
-			<li><a href="/tab/hiring/?u=Accountant"	>Accountant</a></li>
-			<li><a href="/tab/hiring/?u=SpreadBot"	>SpreadBot</a></li>
-		</ul>
-		<?php echo($u); ?>
+		<div class="pick">
+			<ul>
+				<li><a href="/tab/hiring/?u=Intern"		>Intern</a></li>
+				<li><a href="/tab/hiring/?u=Accountant"	>Accountant</a></li>
+				<li><a href="/tab/hiring/?u=SpreadBot"	>SpreadBot</a></li>
+			</ul>
+		</div>
+		<div class="buy">
+			<h1><?php echo $U?></h1>
+			<button class="hirebtn">Hire!</button>
+			<ul id="unit-stats">
+
+			</ul>
+		</div>
 	</div>
 	
 	</body>
