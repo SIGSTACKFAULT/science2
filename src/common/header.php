@@ -25,3 +25,11 @@
 				</tr>
 			</table>
 		</div>
+		<div id="cc0">
+			<a href="https://creativecommons.org/publicdomain/zero/1.0/">
+				<img
+					src = "https://i.creativecommons.org/p/zero/1.0/88x31.png"
+					alt = "cc0"
+				>
+			</a>
+		</div>
