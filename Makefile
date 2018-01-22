@@ -22,7 +22,7 @@ build/%.json: src/%.json
 	cp	$< $@
 
 
-build/%.css: src/%.less
+build/%.css: src/%.less color_const.less
 	lessc	$< $@
 
 
