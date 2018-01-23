@@ -37,7 +37,7 @@ if($U == ""){
 		</div>
 		<div class="buy">
 			<h1><?php echo $U?><span class="amt">0</span></h1>
-			<button class="hirebtn" onclick="xyzzy();">Hire!</button><span class="cost">?</span>
+			<button class="hirebtn" onclick="hire.hire();">Hire!</button><span class="cost">?</span>
 			<ul id="unit-stats">
 
 			</ul>
